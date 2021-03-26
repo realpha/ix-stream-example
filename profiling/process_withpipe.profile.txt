@@ -1,0 +1,273 @@
+Statistical profiling result from isolate-0x46548a0-27612-v8.log, (18000 ticks, 19 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   4895   27.2%          /home/*****/.nvm/versions/node/v14.15.1/bin/node
+    118    0.7%          /lib/x86_64-linux-gnu/libc-2.27.so
+     14    0.1%          /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+    176    1.0%    1.4%  LazyCompile: *<anonymous> /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/operators/map.js:14:34
+    149    0.8%    1.1%  LazyCompile: *<anonymous> /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/operators/flatmap.js:14:34
+    146    0.8%    1.1%  LazyCompile: *_getIterable /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/operators/memoize.js:21:24
+    134    0.7%    1.0%  LazyCompile: *<anonymous> /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/operators/filter.js:14:34
+    112    0.6%    0.9%  LazyCompile: *reduce /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/reduce.js:18:22
+    112    0.6%    0.9%  LazyCompile: *count /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/count.js:17:21
+    111    0.6%    0.9%  LazyCompile: *readableAddChunk _stream_readable.js:231:26
+    106    0.6%    0.8%  LazyCompile: *fromString buffer.js:444:20
+     53    0.3%    0.4%  LazyCompile: *writeGeneric internal/stream_base_commons.js:143:22
+     42    0.2%    0.3%  LazyCompile: *ondata _stream_readable.js:717:18
+     34    0.2%    0.3%  LazyCompile: *exports.FromAsyncIterable /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/from.js:52:38
+     33    0.2%    0.3%  RegExp: [\s{2,}]+
+     31    0.2%    0.2%  LazyCompile: *_pull /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/tonodestream.js:28:16
+     29    0.2%    0.2%  RegExp: [\W\(\)]+
+     28    0.2%    0.2%  LazyCompile: *createAsyncIterator _stream_readable.js:1099:36
+     23    0.1%    0.2%  LazyCompile: *Readable.read _stream_readable.js:390:35
+     23    0.1%    0.2%  LazyCompile: *<anonymous> /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/of.js:11:34
+     22    0.1%    0.2%  LazyCompile: *<anonymous> /home/*****/workspace/ix-stream-example/dist/main.js:20:304
+     22    0.1%    0.2%  LazyCompile: *<anonymous> /home/*****/workspace/ix-stream-example/dist/main.js:20:150
+     19    0.1%    0.1%  RegExp: \s
+     18    0.1%    0.1%  LazyCompile: *<anonymous> /home/*****/workspace/ix-stream-example/dist/main.js:20:262
+     17    0.1%    0.1%  RegExp: \bs\b
+     14    0.1%    0.1%  LazyCompile: *throwIfAborted /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/aborterror.js:17:24
+     12    0.1%    0.1%  LazyCompile: *pruneLine /home/*****/workspace/ix-stream-example/dist/line_utils/pruneline.js:8:19
+     11    0.1%    0.1%  LazyCompile: *<anonymous> /home/*****/workspace/ix-stream-example/dist/main.js:20:203
+     10    0.1%    0.1%  LazyCompile: *from buffer.js:306:28
+     10    0.1%    0.1%  LazyCompile: *<anonymous> /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/operators/memoize.js:35:61
+      9    0.1%    0.1%  LazyCompile: *wrapWithAbort /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/operators/withabort.js:42:23
+      9    0.1%    0.1%  LazyCompile: *<anonymous> /home/*****/workspace/ix-stream-example/dist/main.js:20:27
+      8    0.0%    0.1%  RegExp: \d+
+      4    0.0%    0.0%  RegExp: \r?\n|\r(?!\n)
+      4    0.0%    0.0%  LazyCompile: *predicate /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/count.js:18:82
+      4    0.0%    0.0%  LazyCompile: *of /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/of.js:27:12
+      4    0.0%    0.0%  LazyCompile: *afterWrite _stream_writable.js:456:20
+      2    0.0%    0.0%  LazyCompile: *get /home/*****/workspace/ix-stream-example/node_modules/.pnpm/tslib@2.0.0/node_modules/tslib/tslib.js:152:71
+      2    0.0%    0.0%  LazyCompile: *<anonymous> /home/*****/workspace/ix-stream-example/dist/main.js:20:68
+      1    0.0%    0.0%  LazyCompile: *shift internal/streams/buffer_list.js:36:8
+      1    0.0%    0.0%  LazyCompile: *emit events.js:263:44
+      1    0.0%    0.0%  LazyCompile: *Writable.write _stream_writable.js:258:36
+
+ [C++]:
+   ticks  total  nonlib   name
+  10920   60.7%   84.2%  __libc_write
+    136    0.8%    1.0%  __pthread_cond_signal
+     69    0.4%    0.5%  __GI___pthread_mutex_lock
+     43    0.2%    0.3%  __pthread_cond_timedwait
+     36    0.2%    0.3%  do_futex_wait.constprop.1
+     34    0.2%    0.3%  __lll_unlock_wake
+     33    0.2%    0.3%  __libc_malloc
+     29    0.2%    0.2%  __GI___pthread_getspecific
+     16    0.1%    0.1%  __GI___pthread_mutex_unlock
+     15    0.1%    0.1%  operator new[](unsigned long, std::nothrow_t const&)
+     11    0.1%    0.1%  operator new[](unsigned long)
+     10    0.1%    0.1%  mprotect
+     10    0.1%    0.1%  cfree
+      8    0.0%    0.1%  __pthread_cond_broadcast
+      7    0.0%    0.1%  __lll_lock_wait
+      6    0.0%    0.0%  write
+      5    0.0%    0.0%  __pthread_enable_asynccancel
+      3    0.0%    0.0%  operator delete[](void*)
+      3    0.0%    0.0%  brk
+      2    0.0%    0.0%  __errno_location
+      2    0.0%    0.0%  _IO_default_xsputn
+      1    0.0%    0.0%  std::__detail::_Prime_rehash_policy::_M_next_bkt(unsigned long) const
+      1    0.0%    0.0%  posix_memalign
+      1    0.0%    0.0%  operator delete(void*)
+      1    0.0%    0.0%  munmap
+      1    0.0%    0.0%  mmap
+      1    0.0%    0.0%  getpid
+      1    0.0%    0.0%  fwrite
+      1    0.0%    0.0%  epoll_pwait
+      1    0.0%    0.0%  __pthread_disable_asynccancel
+      1    0.0%    0.0%  _IO_vfprintf
+
+ [Summary]:
+   ticks  total  nonlib   name
+   1546    8.6%   11.9%  JavaScript
+  11408   63.4%   87.9%  C++
+    469    2.6%    3.6%  GC
+   5027   27.9%          Shared libraries
+     19    0.1%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+  10920   98.1%   60.7%  __libc_write
+     68    0.6%    0.4%  __GI___pthread_mutex_lock
+     29    0.3%    0.2%  __libc_malloc
+     28    0.3%    0.2%  __GI___pthread_getspecific
+     15    0.1%    0.1%  operator new[](unsigned long, std::nothrow_t const&)
+     15    0.1%    0.1%  __GI___pthread_mutex_unlock
+     11    0.1%    0.1%  operator new[](unsigned long)
+      7    0.1%    0.0%  mprotect
+      7    0.1%    0.0%  cfree
+      6    0.1%    0.0%  __lll_unlock_wake
+      5    0.0%    0.0%  __pthread_enable_asynccancel
+      3    0.0%    0.0%  write
+      3    0.0%    0.0%  operator delete[](void*)
+      2    0.0%    0.0%  brk
+      2    0.0%    0.0%  __errno_location
+      1    0.0%    0.0%  std::__detail::_Prime_rehash_policy::_M_next_bkt(unsigned long) const
+      1    0.0%    0.0%  posix_memalign
+      1    0.0%    0.0%  operator delete(void*)
+      1    0.0%    0.0%  fwrite
+      1    0.0%    0.0%  __pthread_disable_asynccancel
+      1    0.0%    0.0%  __pthread_cond_signal
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+  10920   60.7%  __libc_write
+  10920  100.0%    LazyCompile: *writeGeneric internal/stream_base_commons.js:143:22
+  10836   99.2%      LazyCompile: *ondata _stream_readable.js:717:18
+  10800   99.7%        LazyCompile: *readableAddChunk _stream_readable.js:231:26
+  10725   99.3%          LazyCompile: *_pull /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/tonodestream.js:28:16
+  10725  100.0%            /home/*****/.nvm/versions/node/v14.15.1/bin/node
+
+   4895   27.2%  /home/*****/.nvm/versions/node/v14.15.1/bin/node
+   2612   53.4%    /home/*****/.nvm/versions/node/v14.15.1/bin/node
+    810   31.0%      /home/*****/.nvm/versions/node/v14.15.1/bin/node
+    331   40.9%        LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:65:35
+    285   35.2%        LazyCompile: *_getIterable /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/operators/memoize.js:21:24
+    285  100.0%          /home/*****/.nvm/versions/node/v14.15.1/bin/node
+    266   93.3%            /home/*****/.nvm/versions/node/v14.15.1/bin/node
+     18    6.3%            LazyCompile: *_pull /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/tonodestream.js:28:16
+    146   18.0%        LazyCompile: *pruneLine /home/*****/workspace/ix-stream-example/dist/line_utils/pruneline.js:8:19
+    146  100.0%          LazyCompile: *<anonymous> /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/operators/map.js:14:34
+    146  100.0%            /home/*****/.nvm/versions/node/v14.15.1/bin/node
+     15    1.9%        LazyCompile: *<anonymous> /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/operators/memoize.js:35:61
+     15  100.0%          /home/*****/.nvm/versions/node/v14.15.1/bin/node
+     15  100.0%            LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:65:35
+     11    1.4%        LazyCompile: ~pruneLine /home/*****/workspace/ix-stream-example/dist/line_utils/pruneline.js:8:19
+     10   90.9%          LazyCompile: *<anonymous> /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/operators/map.js:14:34
+     10  100.0%            /home/*****/.nvm/versions/node/v14.15.1/bin/node
+      1    9.1%          LazyCompile: ~<anonymous> /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/operators/map.js:14:34
+      1  100.0%            /home/*****/.nvm/versions/node/v14.15.1/bin/node
+      9    1.1%        /home/*****/.nvm/versions/node/v14.15.1/bin/node
+      9  100.0%          LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:65:35
+    755   28.9%      LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:65:35
+    307   11.8%      LazyCompile: *writeGeneric internal/stream_base_commons.js:143:22
+    304   99.0%        LazyCompile: *ondata _stream_readable.js:717:18
+    303   99.7%          LazyCompile: *readableAddChunk _stream_readable.js:231:26
+    303  100.0%            LazyCompile: *_pull /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/tonodestream.js:28:16
+    192    7.4%      LazyCompile: *pruneLine /home/*****/workspace/ix-stream-example/dist/line_utils/pruneline.js:8:19
+    192  100.0%        LazyCompile: *<anonymous> /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/operators/map.js:14:34
+    192  100.0%          /home/*****/.nvm/versions/node/v14.15.1/bin/node
+    192  100.0%            /home/*****/.nvm/versions/node/v14.15.1/bin/node
+    146    5.6%      LazyCompile: ~handleWriteReq internal/stream_base_commons.js:47:24
+    146  100.0%        LazyCompile: ~writeGeneric internal/stream_base_commons.js:143:22
+    104   71.2%          LazyCompile: ~Socket._writeGeneric net.js:759:42
+    104  100.0%            LazyCompile: ~Socket._write net.js:796:35
+     42   28.8%          LazyCompile: *ondata _stream_readable.js:717:18
+     25   59.5%            LazyCompile: *emit events.js:263:44
+     17   40.5%            LazyCompile: *readableAddChunk _stream_readable.js:231:26
+     56    2.1%      LazyCompile: *reduce /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/reduce.js:18:22
+     56  100.0%        /home/*****/.nvm/versions/node/v14.15.1/bin/node
+     56  100.0%          /home/*****/.nvm/versions/node/v14.15.1/bin/node
+     56  100.0%            LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:65:35
+     56    2.1%      LazyCompile: *<anonymous> /home/*****/workspace/ix-stream-example/dist/main.js:20:150
+     56  100.0%        LazyCompile: *<anonymous> /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/operators/map.js:14:34
+     56  100.0%          /home/*****/.nvm/versions/node/v14.15.1/bin/node
+     56  100.0%            /home/*****/.nvm/versions/node/v14.15.1/bin/node
+     44    1.7%      LazyCompile: *<anonymous> /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/operators/flatmap.js:14:34
+     44  100.0%        /home/*****/.nvm/versions/node/v14.15.1/bin/node
+     25   56.8%          /home/*****/.nvm/versions/node/v14.15.1/bin/node
+     25  100.0%            LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:65:35
+     18   40.9%          LazyCompile: *<anonymous> /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/operators/filter.js:14:34
+     18  100.0%            /home/*****/.nvm/versions/node/v14.15.1/bin/node
+      1    2.3%          LazyCompile: *_getIterable /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/operators/memoize.js:21:24
+      1  100.0%            /home/*****/.nvm/versions/node/v14.15.1/bin/node
+     37    1.4%      LazyCompile: *<anonymous> /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/operators/memoize.js:35:61
+     37  100.0%        /home/*****/.nvm/versions/node/v14.15.1/bin/node
+     37  100.0%          LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:65:35
+    499   10.2%    LazyCompile: *fromString buffer.js:444:20
+    380   76.2%      LazyCompile: *readableAddChunk _stream_readable.js:231:26
+    380  100.0%        LazyCompile: *_pull /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/tonodestream.js:28:16
+    380  100.0%          /home/*****/.nvm/versions/node/v14.15.1/bin/node
+    380  100.0%            /home/*****/.nvm/versions/node/v14.15.1/bin/node
+    115   23.0%      LazyCompile: *from buffer.js:306:28
+    114   99.1%        LazyCompile: *readableAddChunk _stream_readable.js:231:26
+    114  100.0%          LazyCompile: *_pull /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/tonodestream.js:28:16
+    114  100.0%            /home/*****/.nvm/versions/node/v14.15.1/bin/node
+    319    6.5%    LazyCompile: *reduce /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/reduce.js:18:22
+    319  100.0%      /home/*****/.nvm/versions/node/v14.15.1/bin/node
+    319  100.0%        /home/*****/.nvm/versions/node/v14.15.1/bin/node
+    319  100.0%          LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:65:35
+    270    5.5%    LazyCompile: *writeGeneric internal/stream_base_commons.js:143:22
+    264   97.8%      LazyCompile: *ondata _stream_readable.js:717:18
+    264  100.0%        LazyCompile: *readableAddChunk _stream_readable.js:231:26
+    263   99.6%          LazyCompile: *_pull /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/tonodestream.js:28:16
+    263  100.0%            /home/*****/.nvm/versions/node/v14.15.1/bin/node
+      3    1.1%      LazyCompile: ~Socket._writeGeneric net.js:759:42
+      3  100.0%        LazyCompile: ~Socket._write net.js:796:35
+      3  100.0%          LazyCompile: ~writeOrBuffer _stream_writable.js:334:23
+      3  100.0%            LazyCompile: ~Writable.write _stream_writable.js:258:36
+      3    1.1%      LazyCompile: *Writable.write _stream_writable.js:258:36
+      3  100.0%        LazyCompile: ~ondata _stream_readable.js:717:18
+      3  100.0%          LazyCompile: *readableAddChunk _stream_readable.js:231:26
+      3  100.0%            LazyCompile: *_pull /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/tonodestream.js:28:16
+    158    3.2%    LazyCompile: *<anonymous> /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/operators/map.js:14:34
+    158  100.0%      /home/*****/.nvm/versions/node/v14.15.1/bin/node
+    120   75.9%        /home/*****/.nvm/versions/node/v14.15.1/bin/node
+    120  100.0%          LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:65:35
+     21   13.3%        LazyCompile: *_getIterable /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/operators/memoize.js:21:24
+     21  100.0%          /home/*****/.nvm/versions/node/v14.15.1/bin/node
+     14   66.7%            LazyCompile: *_pull /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/tonodestream.js:28:16
+      7   33.3%            LazyCompile: *reduce /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/reduce.js:18:22
+      7    4.4%        LazyCompile: *<anonymous> /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/operators/flatmap.js:14:34
+      7  100.0%          /home/*****/.nvm/versions/node/v14.15.1/bin/node
+      7  100.0%            /home/*****/.nvm/versions/node/v14.15.1/bin/node
+      5    3.2%        LazyCompile: *<anonymous> /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/operators/map.js:14:34
+      5  100.0%          /home/*****/.nvm/versions/node/v14.15.1/bin/node
+      5  100.0%            LazyCompile: *<anonymous> /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/operators/flatmap.js:14:34
+      5    3.2%        LazyCompile: *<anonymous> /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/operators/filter.js:14:34
+      5  100.0%          /home/*****/.nvm/versions/node/v14.15.1/bin/node
+      5  100.0%            LazyCompile: *<anonymous> /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/operators/map.js:14:34
+    148    3.0%    LazyCompile: *_getIterable /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/operators/memoize.js:21:24
+    148  100.0%      /home/*****/.nvm/versions/node/v14.15.1/bin/node
+     87   58.8%        /home/*****/.nvm/versions/node/v14.15.1/bin/node
+     87  100.0%          LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:65:35
+     25   16.9%        LazyCompile: *reduce /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/reduce.js:18:22
+     25  100.0%          /home/*****/.nvm/versions/node/v14.15.1/bin/node
+     25  100.0%            /home/*****/.nvm/versions/node/v14.15.1/bin/node
+     21   14.2%        LazyCompile: *count /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/count.js:17:21
+     21  100.0%          /home/*****/.nvm/versions/node/v14.15.1/bin/node
+     21  100.0%            /home/*****/.nvm/versions/node/v14.15.1/bin/node
+     14    9.5%        LazyCompile: *_pull /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/tonodestream.js:28:16
+     14  100.0%          /home/*****/.nvm/versions/node/v14.15.1/bin/node
+     14  100.0%            /home/*****/.nvm/versions/node/v14.15.1/bin/node
+    123    2.5%    LazyCompile: *_pull /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/tonodestream.js:28:16
+    123  100.0%      /home/*****/.nvm/versions/node/v14.15.1/bin/node
+    123  100.0%        /home/*****/.nvm/versions/node/v14.15.1/bin/node
+    123  100.0%          LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:65:35
+     95    1.9%    LazyCompile: *readableAddChunk _stream_readable.js:231:26
+     94   98.9%      LazyCompile: *_pull /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/tonodestream.js:28:16
+     94  100.0%        /home/*****/.nvm/versions/node/v14.15.1/bin/node
+     94  100.0%          /home/*****/.nvm/versions/node/v14.15.1/bin/node
+     94  100.0%            LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:65:35
+      1    1.1%      LazyCompile: *lineListener readline.js:1094:26
+      1  100.0%        LazyCompile: *Interface._normalWrite readline.js:455:44
+      1  100.0%          LazyCompile: ~ondata readline.js:193:18
+      1  100.0%            LazyCompile: *addChunk _stream_readable.js:299:18
+     89    1.8%    LazyCompile: *<anonymous> /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/operators/flatmap.js:14:34
+     89  100.0%      /home/*****/.nvm/versions/node/v14.15.1/bin/node
+     66   74.2%        /home/*****/.nvm/versions/node/v14.15.1/bin/node
+     66  100.0%          LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:65:35
+     23   25.8%        LazyCompile: *<anonymous> /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/operators/filter.js:14:34
+     23  100.0%          /home/*****/.nvm/versions/node/v14.15.1/bin/node
+     23  100.0%            LazyCompile: *<anonymous> /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/operators/map.js:14:34
+     70    1.4%    LazyCompile: *<anonymous> /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/operators/memoize.js:35:61
+     70  100.0%      /home/*****/.nvm/versions/node/v14.15.1/bin/node
+     70  100.0%        LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:65:35
+     69    1.4%    LazyCompile: *<anonymous> /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/operators/filter.js:14:34
+     69  100.0%      /home/*****/.nvm/versions/node/v14.15.1/bin/node
+     57   82.6%        /home/*****/.nvm/versions/node/v14.15.1/bin/node
+     57  100.0%          LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:65:35
+     12   17.4%        LazyCompile: *<anonymous> /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/operators/map.js:14:34
+     12  100.0%          /home/*****/.nvm/versions/node/v14.15.1/bin/node
+     10   83.3%            LazyCompile: *_getIterable /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/operators/memoize.js:21:24
+      2   16.7%            LazyCompile: *<anonymous> /home/*****/workspace/ix-stream-example/node_modules/.pnpm/ix@4.3.1/node_modules/ix/asynciterable/operators/map.js:14:34
+
