@@ -1,73 +1,71 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
-</p>
+## Motivation
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-  
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+The [ReactiveX](http://reactivex.io/) stream API has been widely adopted over the last years in the industry and in open source ecosystems (e.g. [RxJS](https://rxjs-dev.firebaseapp.com/) in Angular, or [RxJava at Netfilx](https://netflixtechblog.com/tagged/rxjava)).
+Node also provides a native Stream API for most I/O bound tasks which is also highly usable on it's own. If you are comfortable writing most of the flow and transformation logic yourself or using packages of various age. This can be especially challenging for new team members, who just start to wrap their head around the concept of streams in general and get overwhelmed by all the different APIs, packages and fancy names (e.g. the [M-word](https://en.wikipedia.org/wiki/Monad_functional_programming))
 
-## Description
+Streams are hard to learn, therefore it would be good if we can get accustomed with one API which we can use in different contexts. Rx is widely adopted and documented well, so it seems to be a viable candidate. We can use it in the frontend, in the backend and the API (more specifically the operators) are implemented in a myriad of other languages.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+There is just one problem: RxJs is *purely reactive*, meaning that the observable streams don't support [backpressure](https://nodejs.org/en/docs/guides/backpressuring-in-streams/). This makes them unsuitable to interoperate with native streams in backend for most use cases. Luckily, a few smart and competent people were motivated enough and come up with a solution: [IxJs](https://github.com/ReactiveX/IxJS).
+
+Ix is also part of the ReactiveX project, provides a Rx compatible API, is based upon AsyncIterators and plays very well with Node's native stream API.
+
+## Use case
+
+To explore a few of it's features, I developed a `wc` inspired, small utility script. It's not overly configurable but the defaults should be enough to give an impression of Ix's capabilities.
+The script creates a read stream from a file, applies some projection functions and collects & calculates some data about the contents of the file while it is at it.
+
 
 ## Installation
 
 ```bash
-$ npm install
+$ (p)npm install
+```
+
+## Build
+
+```bash
+$ (p)npm run build
 ```
 
 ## Running the app
 
 ```bash
-# development
-$ npm run start
+# Without output stream
+$ (p)npm run start 
 
-# watch mode
-$ npm run start:dev
+# With output stream
+$ PIPE_OUT=<ANY_STRING> (p)npm run start
 
-# production mode
-$ npm run start:prod
 ```
 
-## Test
 
-```bash
-# unit tests
-$ npm run test
+## Conclusion
 
-# e2e tests
-$ npm run test:e2e
+The stream abstraction provided by IxJS is highly composable and ergonomic compared to native transform streams (or through2, split2 et.al.) for example. I particularly enjoyed the great [interoperability](https://github.com/ReactiveX/IxJS/blob/master/docs/asynciterable/converting.md#creating-a-sequence-from-a-node-stream) with Node's native Readable and Writable streams. This also means great interoperability with an awful lot of dedicated stream implementations in the [ecosystem](https://www.npmjs.com/package/csv).
 
-# test coverage
-$ npm run test:cov
-```
+Although documentation is quite sparse and I don't have a deep knowledge of the Rx API, the resources I found for RxJS helped me greatly with understanding the use cases and behaviors of the different operators (I think...).
+Additionally, the usage of IxJS and RxJS is not mutually exclusive. E.g. you can easily [convert your RxJS Observable to an IxJS AsyncIterator](https://github.com/ReactiveX/IxJS/blob/master/docs/asynciterable/converting.md#creating-a-sequence-from-an-observable). 
 
-## Support
+To summarize: 
+- The Rx family provides a nearly universal and ergonomic abstraction for (reactive) streams
+- In comparison to other stream APIs, IxJS and RxJS especially shine when the use case calls for a lot of branching, type lifting and/or complex projections
+- For Push based APIs (such as DOM events) RxJS
+- For Pull based APIs (such as sockets or files) IxJS seems to be more suitable
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+## Tidbits
 
-## Stay in touch
+For those interested in the discussion on why RxJS doesn't support backpressure, here the link to the thread on [Github](https://github.com/ReactiveX/rxjs/issues/71) 
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+Another important topic regarding the different use cases of RxJS and IxJS and closely related to the topic of backpressure: [Push vs. Pull APIs](https://stackoverflow.com/questions/51254117/what-is-difference-between-push-based-and-pull-based-structures-like-ienumerable)
+
+Ultimately, a lot of the interoperability benefits of IxJS stem from the foundational AsyncIterators. Read more [here.](https://github.com/tc39/proposal-async-iteration)
+
+## Disclaimer
+
+Based upon the always helpful [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+
+All opinions expressed are my own and do not reflect the opinion of my employer(s).
 
 ## License
 
-  Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+[MIT](./LICENSE).
