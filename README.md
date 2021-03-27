@@ -1,7 +1,7 @@
 ## Motivation
 
 The [ReactiveX](http://reactivex.io/) stream API has been widely adopted over the last years in the industry and in open source ecosystems (e.g. [RxJS](https://rxjs-dev.firebaseapp.com/) in Angular, or [RxJava at Netfilx](https://netflixtechblog.com/tagged/rxjava)).
-Node also provides a native Stream API for most I/O bound tasks which is also highly usable on it's own. If you are comfortable writing most of the flow and transformation logic yourself or using packages of various age. This can be especially challenging for new team members, who just start to wrap their head around the concept of streams in general and get overwhelmed by all the different APIs, packages and fancy names (e.g. the [M-word](https://en.wikipedia.org/wiki/Monad_functional_programming))
+Node also provides a native Stream API for most I/O bound tasks which is also highly usable on it's own. If you are comfortable writing most of the flow and transformation logic yourself or using packages of various age. This can be especially challenging for new team members, who just start to wrap their head around the concept of streams in general and get overwhelmed by all the different APIs, packages and fancy names (e.g. the [M-word](https://en.wikipedia.org/wiki/Monad_(functional_programming)))
 
 Streams are hard to learn, therefore it would be good if we can get accustomed with one API which we can use in different contexts. Rx is widely adopted and documented well, so it seems to be a viable candidate. We can use it in the frontend, in the backend and the API (more specifically the operators) are implemented in a myriad of other languages.
 
