@@ -14,6 +14,31 @@ Ix is also part of the ReactiveX project, provides a Rx compatible API, is based
 To explore a few of it's features, I developed a `wc` inspired, small utility script. It's not overly configurable but the defaults should be enough to give an impression of Ix's capabilities.
 The script creates a read stream from a file, applies some projection functions and collects & calculates some data about the contents of the file while it is at it.
 
+### Results
+
+```bash
+$ pnpm run start
+
+920528 words in file
+23716 distinct words in file
+┌─────────┬──────┬────────┬───────┐
+│ (index) │ rank │  word  │ count │
+├─────────┼──────┼────────┼───────┤
+│    0    │  1   │ 'the'  │ 27660 │
+│    1    │  2   │ 'and'  │ 26784 │
+│    2    │  3   │  'i'   │ 22538 │
+│    3    │  4   │  'to'  │ 19819 │
+│    4    │  5   │  'of'  │ 18191 │
+│    5    │  6   │  'a'   │ 14746 │
+│    6    │  7   │ 'you'  │ 13860 │
+│    7    │  8   │  'my'  │ 12489 │
+│    8    │  9   │ 'that' │ 11549 │
+│    9    │  10  │  'in'  │ 11123 │
+└─────────┴──────┴────────┴───────┘
+executionTime: 4.188s
+
+$~
+```
 
 ## Installation
 
